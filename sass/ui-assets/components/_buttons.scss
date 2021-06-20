@@ -1,0 +1,47 @@
+
+.btn-social{
+	width:36px; height:36px; display:inline-block;
+	line-height:36px;
+	border-radius:20px; background-color:rgba(#fff, .1); text-align:center;
+	color:$gray-500;
+	i { font-size:20px; }
+
+	&:hover{
+		background-color:rgba(#fff, .2); color:$gray-100;
+	}
+}
+
+
+.btn-icon.btn-lg{ width: $input-height-lg;  text-align: center;
+	padding-left:4px; padding-right:4px;
+	i{  line-height:1;  }
+}
+
+.btn-icon.btn-sm{ width: $input-height-sm;  
+	padding-left:3px; padding-right:3px;
+	i{  line-height:1;  }
+}
+
+
+.btn-light{ background-color:#fff; border-color:$border-color;
+box-shadow:0 1px 3px rgba(#333, .1); 
+color:$gray-500;
+	i{ color:$gray-500; }
+	&:hover{ background-color:#fff;  border-color:darken($border-color, 30%);  }
+}
+
+.btn{
+	.text + i{ margin-left:10px; }
+	i + .text{ margin-left:10px; }
+}
+
+.btn-video-play{
+	background: rgba(0,0,0,0.40);
+	width:72px; height:72px; text-align:center; border-radius:100px; font-size:18px;
+	display:inline-flex; align-items:center; justify-content:center;
+	color:#fff;
+	i{ margin-left:3px;}
+	&:hover{
+		background: rgba(0,0,0,0.60);
+	}
+}
