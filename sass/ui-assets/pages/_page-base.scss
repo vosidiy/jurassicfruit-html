@@ -24,6 +24,18 @@ body.offcanvas-active{
 }
 
 
+.list-faq{
+  list-style:none; margin:0; padding:0; margin-bottom:20px;
+  li{  border-bottom:1px solid $gray-100;
+    .title{ 
+      font-weight:bold; color:$gray-600; display:block; padding:7px 7px; border-radius:5px;
+      &:hover{ color:$primary; }
+    }
+    article{ margin-left:10px;}
+  } 
+  li:hover{ background-color:$gray-100}
+}
+
 
 /* ================ PAGES HEADER ================== */
 .section-pagetop{ 
