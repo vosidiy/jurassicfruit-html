@@ -1,13 +1,14 @@
 /* --------------------- titles ---------------------- */
-.section-heading{ margin-bottom:25px;
-	p{ max-width: 560px }
+.section-heading {
+  margin-bottom: 25px;
+  p { max-width: 560px; }
 }
-.section-title{ font-size:$h3-font-size; }
+.section-title { font-size: $h3-font-size; }
 
-.small{ line-height: $line-height-sm;}
+.small { line-height: $line-height-sm; }
 
-.b{font-weight:600;}
+.b { font-weight: 600; }
 
 /* ==================  title helpers ================ */
-.rtl{direction:rtl;}
-.ltr{direction:ltr;}
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }

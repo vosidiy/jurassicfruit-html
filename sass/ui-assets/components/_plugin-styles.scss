@@ -1,19 +1,99 @@
 /* ================ OWL SLIDER BANNER ================ */
 
-.owl-carousel{
-	.owl-nav .owl-prev, .owl-nav  .owl-next {
-		  display: inline-block;
-		  background-color:#eee;
-		  color:$gray-500;
-		  width: 50px; height:50px;
-		  text-align: center; 
-		  position: absolute;
-		  border-radius:50px;
-		  z-index: 9;
-	}
+.owl-carousel {
+  .owl-nav button.owl-prev,
+  .owl-nav button.owl-next {
+    background-color: #eee;
+    border-radius: 50px;
+    color: $gray-500;
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    z-index: 9;
+  }
 
-	.owl-nav .owl-prev.disabled, .owl-nav  .owl-next.disabled { display: none;}
+  .owl-nav .owl-prev.disabled,
+  .owl-nav .owl-next.disabled { display: none; }
 
-	.owl-nav button:hover{  background-color: $gray-300;  }
+  .owl-nav button:hover { background-color: $gray-300; }
 }
 
+/*
+ *  Default theme - Owl Carousel CSS File
+ */
+.owl-prev,
+.owl-next {
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  padding: 7px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-prev { left: -60px; }
+.owl-next { right: -60px; }
+
+.owl-prev:focus,
+.owl-next:focus { outline: 0; }
+
+.owl-nav .disabled {
+  cursor: default;
+  opacity: 50%;
+}
+
+.owl-dots {
+  margin-top: 15px;
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+}
+
+.owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.owl-dots .owl-dot {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+.owl-dots .owl-dot span {
+  backface-visibility: visible;
+  background: #d6d6d6;
+  border-radius: 30px;
+  display: block;
+  height: 10px;
+  margin: 4px 5px;
+  transition: opacity 200ms ease;
+  width: 10px;
+}
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
+.owl-carousel .owl-item img {
+  width: unset;
+}
+
+// lightslider
+.lSAction > a { /* stylelint-disable-line selector-class-pattern */
+  background-image: url("/static/images/controls.png");
+}
+
+// intl-tel-input
+
+.iti-flag {
+  background-image: url("/static/flags/flags.png");
+}
+
+@media (min-resolution: 192dpi) {
+  .iti-flag {
+    background-image: url("/static/flags/flags@2x.png");
+  }
+}

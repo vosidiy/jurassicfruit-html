@@ -1,5 +1,7 @@
-.list-group{
-	a{ color:$gray-600; font-weight:600;
-		&:hover:not(.active){ color:$primary }
-	}
+.list-group {
+  a {
+    color: $gray-600;
+    font-weight: 600;
+    &:hover:not(.active) { color: $primary; }
+  }
 }
