@@ -1,7 +1,7 @@
 // BOOTSTRAP Override Variables
 
 // MUST BE FUNCTION BY BOOTSTRAP
-@import "~bootstrap/scss/functions";
+@import "bootstrap-assets/functions";
 
 
 // Variables
@@ -1098,7 +1098,3 @@ $positions: static, relative, absolute, fixed, sticky !default;
 // Printing
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
-
-// Font Awesome
-
-$fa-font-path: '../icons';

@@ -1,67 +1,47 @@
-.btn-social {
-  background-color: rgb(255 255 255 / 10%);
-  border-radius: 20px;
-  color: $gray-500;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  width: 36px;
-  i { font-size: 20px; }
 
-  &:hover {
-    background-color: rgb(255 255 255 / 20%);
-    color: $gray-100;
-  }
+.btn-social{
+	width:36px; height:36px; display:inline-block;
+	line-height:36px;
+	border-radius:20px; background-color:rgba(#fff, .1); text-align:center;
+	color:$gray-500;
+	i { font-size:20px; }
+
+	&:hover{
+		background-color:rgba(#fff, .2); color:$gray-100;
+	}
 }
 
-.btn-light {
-  background-color: #fff;
-  border-color: $border-color;
-  box-shadow: 0 1px 3px rgb(51 51 51 / 10%);
-  color: $gray-500;
-  i { color: $gray-500; }
 
-  &:hover {
-    background-color: #fff;
-    border-color: darken($border-color, 30%); /* stylelint-disable-line scss/no-global-function-names */
-  }
+.btn-icon.btn-lg{ width: $input-height-lg;  text-align: center;
+	padding-left:4px; padding-right:4px;
+	i{  line-height:1;  }
 }
 
-.btn-video-play {
-  align-items: center;
-  background: rgb(0 0 0 / 40%);
-  border-radius: 100px;
-  color: #fff;
-  display: inline-flex;
-  font-size: 18px;
-  height: 72px;
-  justify-content: center;
-  text-align: center;
-  width: 72px;
-  i { margin-left: 3px; }
-
-  &:hover {
-    background: rgb(0 0 0 / 60%);
-  }
+.btn-icon.btn-sm{ width: $input-height-sm;  
+	padding-left:3px; padding-right:3px;
+	i{  line-height:1;  }
 }
 
-.btn-icon.btn-lg {
-  padding-left: 4px;
-  padding-right: 4px;
-  text-align: center;
-  width: $input-height-lg;
-  i { line-height: 1; }
+
+.btn-light{ background-color:#fff; border-color:$border-color;
+box-shadow:0 1px 3px rgba(#333, .1); 
+color:$gray-500;
+	i{ color:$gray-500; }
+	&:hover{ background-color:#fff;  border-color:darken($border-color, 30%);  }
 }
 
-.btn-icon.btn-sm {
-  padding-left: 3px;
-  padding-right: 3px;
-  width: $input-height-sm;
-  i { line-height: 1; }
+.btn{
+	.text + i{ margin-left:10px; }
+	i + .text{ margin-left:10px; }
 }
 
-.btn {
-  .text + i { margin-left: 10px; }
-  i + .text { margin-left: 10px; }
+.btn-video-play{
+	background: rgba(0,0,0,0.40);
+	width:72px; height:72px; text-align:center; border-radius:100px; font-size:18px;
+	display:inline-flex; align-items:center; justify-content:center;
+	color:#fff;
+	i{ margin-left:3px;}
+	&:hover{
+		background: rgba(0,0,0,0.60);
+	}
 }
