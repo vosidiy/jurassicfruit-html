@@ -1,17 +1,20 @@
-.heading-category{
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	margin-bottom:20px;
+.heading-category {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.breadcrumb{ font-weight:400;
-	a{ color:$text-muted; 
-		&:hover{ color:$primary}
-	}
+.breadcrumb {
+  font-weight: 400;
+
+  a {
+    color: $text-muted;
+    &:hover { color: $primary; }
+  }
 }
 
-.filter{
-	display:inline-flex;
-	select{ margin-right:10px;}
+.filter {
+  display: inline-flex;
+  select { margin-right: 10px; }
 }
