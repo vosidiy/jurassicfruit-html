@@ -91,7 +91,7 @@ ul.row-sm {
   }
 }
 
-.list-check {
+.list-check, .list-check  ul {
   list-style: none;
   padding-left: 0;
 
@@ -104,7 +104,7 @@ ul.row-sm {
   > li::before {
     color: $success;
     content: "\f00c";
-    font-family: fontawesome; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+    font-family: "Font Awesome 5 Free"; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
     font-size: 20px;
     font-weight: 900;
     left: 0;
