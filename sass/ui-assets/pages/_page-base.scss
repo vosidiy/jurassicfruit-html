@@ -1,54 +1,57 @@
-body.offcanvas-active {
-  overflow: hidden;
+body.offcanvas-active{
+	overflow:hidden;
 }
 
-.offcanvas-header { display: none; }
+.offcanvas-header{ display:none; }
 
-.screen-overlay {
-  background-color: rgb(34 34 34 / 60%);
+.screen-overlay{
+  width:0%;
   height: 100%;
-  left: 0;
-  opacity: 0%;
+  z-index: 1999;
   position: fixed;
   top: 0;
-  transition: opacity 0.2s linear, visibility 0.1s, width 1s ease-in;
-  visibility: hidden;
-  width: 0%;
-  z-index: 1999;
+  left: 0;
+  opacity:0;
+  visibility:hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition:opacity .2s linear, visibility .1s, width 1s ease-in;
 }
-
 .screen-overlay.show {
-  opacity: 100%;
-  transition: opacity 0.5s ease, width 0s;
-  visibility: visible;
-  width: 100%;
+    transition:opacity .5s ease, width 0s;
+    opacity:1;
+    width:100%;
+    visibility:visible;
 }
 
-.list-faq {
-  list-style: none;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
 
-  li {
-    border-bottom: 1px solid $gray-100;
-
-    .title {
-      border-radius: 5px;
-      color: $gray-600;
-      display: block;
-      font-weight: bold;
-      padding: 7px;
-      &:hover { color: $primary; }
+.list-faq{
+  list-style:none; margin:0; padding:0; margin-bottom:20px;
+  li{  border-bottom:1px solid $gray-100;
+    .title{ 
+      font-weight:bold; color:$gray-600; display:block; padding:7px 7px; border-radius:5px;
+      &:hover{ color:$primary; }
     }
-    article { margin-left: 10px; }
-  }
-  li:hover { background-color: $gray-100; }
+    article{ margin-left:10px;}
+  } 
+  li:hover{ background-color:$gray-100}
 }
+
 
 /* ================ PAGES HEADER ================== */
-.section-pagetop {
-  background-color: #f0f0f0;
-  padding: 36px 0;
-  p { max-width: 780px; }
+.section-pagetop{ 
+	 padding:36px 0;
+   background-color:#f0f0f0; 
+	 p{ max-width: 780px;}
 }
+
+
+/* desktop only */
+@media all and (min-width: 768px) {
+
+  
+}
+/* desktop only .end */
+
+
+
+

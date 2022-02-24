@@ -1,142 +1,123 @@
-.section-order {
-  overflow: hidden;
+.section-order{
+	overflow:hidden;
 }
 
-.content-order {
-  margin-bottom: 60px;
-  padding-right: 2rem;
+.content-order{
+	padding-right:2rem;	margin-bottom:60px;
+
 }
 
-.order-sidebar { position: relative; }
 
-.order-sidebar::after {
-  background: #f4f4f4;
-  border-left: 1px solid $border-color;
-  bottom: 0;
-  content: "";
-  display: block;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 200%;
-  z-index: -1;
+.order-sidebar{ position:relative; }
+.order-sidebar::after{
+	content: "";
+    display: block;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    background: #f4f4f4;
+    z-index: -1;
+    border-left:1px solid $border-color;
 }
 
-.summary-order-aside {
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-top: 2rem;
+.summary-order-aside{
+    padding-left:2rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
+
 }
 
-.btn-summary-mobile { display: none; }
+.btn-summary-mobile{ display:none;}
 
 /* desktop only */
 @media all and (min-width: 992px) {
-  .summary-order-aside {
-    display: block !important;
-  }
-}
 
+    .summary-order-aside{
+        display:block!important;
+    }
+  
+}
 /* desktop only .end */
+
 
 /* steps line */
 
-.steps {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
+.steps{ display: flex; justify-content: space-between; list-style: none;  
+   margin: 0; margin-bottom: 20px;
+    padding: 0;
 
-  li {
-    flex-grow: 1;
-    position: relative;
-    text-align: center;
-
-    &::after {
-      border-bottom: 3px solid $gray-400;
+  li{ text-align: center; position: relative; flex-grow: 1;
+    &:after{
       content: "";
-      left: 0%;
-      position: absolute;
-      top: 8px;
-      width: 100%;
+        border-bottom:3px solid $gray-400;
+        width: 100%;
+        left:0%;
+        top:8px;
+        position: absolute;
     }
   }
-  li:last-child::after { width: 50%; }
+  li:last-child:after{ width: 50%; }
+  li:first-child:after{ left: 50%;  width: 100%; }
 
-  li:first-child::after {
-    left: 50%;
-    width: 100%;
-  }
+  .step-icon{ position:relative; z-index: 5; width:15px; height:15px; border-radius: 30px; 
+    display:inline-block; text-align: center; line-height:15px; 
+    background:#CED0D1; color: #fff; }
+  .step-text{ display: block; color:#666; font-size:13px }
 
-  .step-icon {
-    background: #ced0d1;
-    border-radius: 30px;
-    color: #fff;
-    display: inline-block;
-    height: 15px;
-    line-height: 15px;
-    position: relative;
-    text-align: center;
-    width: 15px;
-    z-index: 5;
-  }
-
-  .step-text {
-    color: #666;
-    display: block;
-    font-size: 13px;
-  }
-
-  li.active {
-    &::after { border-color: $primary; }
-    .step-text { color: #666; }
-    .step-icon { background-color: $primary; }
+  li.active{
+    &:after{border-color: $primary}
+    .step-text{ color:#666 }
+    .step-icon{ background-color:$primary }
   }
 }
+
+
 
 /// checkmark
-.checkmark__circle { /* stylelint-disable-line selector-class-pattern */
-  animation: stroke 1s linear forwards;
-  fill: none;
-  stroke: $success;
+.checkmark__circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
-  stroke-miterlimit: 10;
   stroke-width: 2;
-}
+  stroke-miterlimit: 10;
+  stroke: $success;
+  fill: none;
+  -webkit-animation: stroke 1s linear forwards;
+          animation: stroke 1s linear forwards; }
 
 .checkmark {
-  animation: fill 0.5s ease-in-out 0.5s forwards, scale 0.4s ease-in-out 1s both;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 $success;
-  display: block;
+  width: 80px;
   height: 80px;
-  margin: 30px auto;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 3;
   stroke: #fff;
   stroke-miterlimit: 10;
-  stroke-width: 3;
-  width: 80px;
-}
+  margin: 30px auto;
+  -webkit-box-shadow: inset 0px 0px 0px $success;
+          box-shadow: inset 0px 0px 0px $success;
+  -webkit-animation: fill .5s ease-in-out .5s forwards, scale .4s ease-in-out 1s both;
+          animation: fill .5s ease-in-out .5s forwards, scale .4s ease-in-out 1s both; }
 
-.checkmark__check { /* stylelint-disable-line selector-class-pattern */
-  animation: stroke 0.5s linear 1s forwards;
+.checkmark__check {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
-  transform-origin: 50% 50%;
-}
+  -webkit-animation: stroke .5s linear 1s forwards;
+          animation: stroke .5s linear 1s forwards; }
+
 
 @keyframes stroke {
-  100% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; } 
 }
 
 @keyframes scale {
-  0%,
-  100% { transform: none; }
-  50% { transform: scale3d(1.3, 1.3, 1); }
+  0%, 100% {  transform: none; }
+  50% { transform: scale3d(1.3, 1.3, 1); } 
 }
 
 @keyframes fill {
-  100% { box-shadow: inset 0 0 0 60px $success; }
+  100% { box-shadow: inset 0px 0px 0px 60px $success; } 
 }

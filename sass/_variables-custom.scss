@@ -1,7 +1,7 @@
 // BOOTSTRAP Override Variables
 
 // MUST BE FUNCTION BY BOOTSTRAP
-@import "~bootstrap/scss/functions";
+@import "bootstrap-assets/functions";
 
 
 // Variables
@@ -574,7 +574,7 @@ $custom-select-feedback-icon-size:          $input-height-inner-half $input-heig
 
 $custom-select-border-width:        $input-border-width !default;
 $custom-select-border-color:        $input-border-color !default;
-$custom-select-border-radius:       $border-radius !default;
+$custom-select-border-radius:       0;//$border-radius !default;
 $custom-select-box-shadow:          inset 0 1px 2px rgba($black, .075) !default;
 
 $custom-select-focus-border-color:  $input-focus-border-color !default;
@@ -1098,7 +1098,3 @@ $positions: static, relative, absolute, fixed, sticky !default;
 // Printing
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
-
-// Font Awesome
-
-$fa-font-path: '../icons';

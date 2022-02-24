@@ -1,130 +1,65 @@
-.form-inline input[type="number"] {
-  max-width: 100px;
+.form-inline input[type='number'] {
+    max-width: 100px;
 }
 
-.input-spinner {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  vertical-align: middle;
-  width: 125px;
 
-  input.form-control {
-    border-color: $border-color;
-    flex-basis: 46px;
-    flex-grow: 0;
-    font-weight: bold;
-    max-width: 46px;
-    text-align: center;
-  }
-
-  .btn {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    text-align: center;
-    width: 42px;
-  }
+.input-spinner{ width: 125px;  flex-wrap: nowrap; display:inline-flex; vertical-align: middle;
+  input.form-control{ text-align: center; max-width: 46px; font-weight: bold;  
+	flex-basis:46px;  border-color:$border-color; flex-grow: 0; 
+   }
+  .btn{ width: 42px; text-align: center; padding-left: 0.5rem; padding-right: 0.5rem; }
 }
 
-.checkbox-btn {
-  position: relative;
-
-  input {
-    opacity: 0%;
-    position: absolute;
-    z-index: -1;
-  }
-
-  input:checked ~ .btn {
-    background-color: $primary;
-    border-color: $primary;
-    color: #fff;
-  }
+.checkbox-btn{ position:relative;
+	input {
+	    position: absolute;
+	    z-index: -1;
+	    opacity: 0;
+	}
+	input:checked ~ .btn{
+		 border-color:$primary; background-color:$primary; color:#fff; 
+	}
 }
 
-.btn-check {
-  border: 1px solid $gray-300;
-  display: inline-block;
-  padding: 7px 15px;
-  position: relative;
-  transition: 0s !important;
-
-  input {
-    opacity: 0%;
-    position: absolute;
-    z-index: -1;
-  }
-
-  &.active {
-    background-color: #fff3e8;
-    border-color: $primary;
-    box-shadow: inset 0 0 10px #ccc;
-  }
-
-  &:hover:not(.active) {
-    background-color: #fff6ef;
-    border-color: #bbb;
-  }
+.btn-check{ 
+	position:relative; padding:7px 15px; display: inline-block; border:1px solid $gray-300; transition:0s!important;
+	input {
+	    position: absolute;
+	    z-index: -1;
+	    opacity: 0;
+	}
+	&.active{ border-color: $primary; box-shadow:0 0 7px rgba($primary, .2); background-color:#fff3e8; }
+	&:hover:not(.active){
+		border-color:#ccc; background-color:#fff6ef;
+	}
+	&:hover:not(.active){
+		border-color:#bbb;
+	}
 }
 
-.js-check {
-  border-radius: 4px;
-  position: relative;
-
-  .title {
-    margin-left: 22px;
-  }
-
-  input {
-    left: 18px;
-    position: absolute;
-    top: 21px;
-  }
-
-  &.active {
-    background-color: #fff3e8;
-    border-color: $primary;
-    box-shadow: 0 0 7px rgba($primary, 0.2); /* stylelint-disable-line color-function-notation */
-  }
-
-  &:hover:not(.active) {
-    background-color: #fff6ef;
-    border-color: #ccc;
-  }
+.btn-check.active{
+	box-shadow:inset 0 0 10px #ccc;
 }
 
-.js-check.box {
-  border-width: 1px;
-  width: 100%;
+.js-check{ 
+	position: relative; border-radius:4px; 
+	.title{
+		margin-left: 22px;
+	}
+	input {
+		position: absolute; top: 21px; left: 18px;
+	}
+	&.active{ border-color: $primary; box-shadow:0 0 7px rgba($primary, .2); background-color:#fff3e8; }
+	&:hover:not(.active){
+		border-color:#ccc; background-color:#fff6ef;
+	}
 }
 
-.card-header {
-  .form-check {
-    margin-bottom: 0;
-    padding-bottom: 5px;
-    padding-top: 5px;
-  }
+.js-check.box{
+	width: 100%; border-width:1px; 
 }
 
-form {
-  button[type="submit"] {
-    > span:not(.submitting) {
-      display: inline;
-    }
 
-    > span.submitting {
-      display: none;
-    }
-  }
-
-  &.submitting {
-    button[type="submit"] {
-      > span:not(.submitting) {
-        display: none;
-      }
-
-      > span.submitting {
-        display: inline;
-      }
-    }
-  }
+.card-header{
+	.form-check{ margin-bottom:0; padding-top:5px; padding-bottom: 5px; }
 }
